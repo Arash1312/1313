@@ -87,5 +87,7 @@ celestia-appd keys add $CELESTIA_WALLET
 Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ø¯Ø±ÛŒØ§ÙØªÛŒ Ø§ÛŒÙ† Ø¨Ø®Ø´ Ø±Ùˆ ØªÙˆÛŒ Ù†ÙˆØª Ù¾Ø¯ Ø¨Ø±Ø§ÛŒ Ø®ÙˆØ¯ØªÙˆÙ† Ø°Ø®ÛŒØ±Ù‡ Ú©Ù†ÛŒØ¯
 
 ------------------------------------------------
-
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+chmod -R 777 /root/nulink
+Ø§Ú¯Ø± Ù¾ÛŒØ§Ù… Ø¯Ø§Ø¯ Ú©Ù‡ Ø§ÛŒÙ† Ù†Ø§Ù… ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ù‡ Ø§ÛŒØ±Ø§Ø¯ Ù†Ø¯Ø§Ø±Ø¹ Ø¨Ù‡ Ù…Ø±Ø­Ù„Ù‡ Ø¨Ø¹Ø¯ Ø¨Ø±ÛŒØ¯
 export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
