@@ -30,7 +30,7 @@ cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
 
 cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-09-16T16-46-42.233370072Z--e686bf9b57cec541e0f46f2c0a41bc8836b9b270 /root/nulink
 
-
+.devcontainer/scripts/onCreateCommand.sh
 chmod -R 777 /root/nulink
 
 pip install virtualenv
@@ -73,7 +73,7 @@ nulink/nulink nulink ursula init \
 --operator-address yyyyyyyyyyyyyyy \
 --max-gas-price 100
 Ø­ÙˆØ§Ø³ØªÙˆÙ† Ø¨Ø§Ø´Ù‡ ØªÙˆÛŒ Ú©Ø¯ Ø¨Ø§Ù„Ø§ Ø§ÙˆÙ† Ù†Ù‚Ø·Ù‡ Ø§ÙˆÙ„ Ú©Ø¯ Ø±Ùˆ Ù‡Ù… Ø¨Ø§ÛŒØ¯  Ú©Ù¾ÛŒ Ú©Ù†ÛŒØ¯
-
+.devcontainer/scripts/onCreateCommand.sh
 Ø¯Ø± Ø§ÛŒÙ† Ù…Ø±Ø­Ù„Ù‡ ÛŒÚ© Ù¾Ø³ÙˆØ±Ø¯ ÙˆØ§Ø±Ø¯ Ù…ÛŒÚ©Ù†ÛŒØ¯ Ùˆ Ø¯ÙˆØ¨Ø§Ø±Ù‡ Ø§ÙˆÙ† Ø±Ùˆ ØªØ§ÛŒÛŒØ¯ Ù…ÛŒâ€ŒÚ©Ù†ÛŒØ¯ Ú©Ù‡ Ø¨Ø§ÛŒØ¯ Ø¯Ø± Ù…Ø±Ø§Ø­Ù„ Ø¨Ø¹Ø¯ Ø§Ø²Ø´ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ú©Ù†ÛŒØ¯
 Ø¯Ø± Ø§ÛŒÙ† Ù…Ø±Ø­Ù„Ù‡ ÛŒÚ© Ù¾Ø³ÙˆØ±Ø¯ ÙˆØ§Ø±Ø¯ Ù…ÛŒÚ©Ù†ÛŒØ¯ Ùˆ Ø¯ÙˆØ¨Ø§Ø±Ù‡ Ø§ÙˆÙ† Ø±Ùˆ ØªØ§ÛŒÛŒØ¯ Ù…ÛŒâ€ŒÚ©Ù†ÛŒØ¯ Ú©Ù‡ Ø¨Ø§ÛŒØ¯ Ø¯Ø± Ù…Ø±Ø§Ø­Ù„ Ø¨Ø¹Ø¯ Ø§Ø²Ø´ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ú©Ù†ÛŒØ¯
 Ø¯Ø± Ø§ÛŒÙ† Ù…Ø±Ø­Ù„Ù‡ ÛŒÚ© Ù¾Ø³ÙˆØ±Ø¯ ÙˆØ§Ø±Ø¯ Ù…ÛŒÚ©Ù†ÛŒØ¯ Ùˆ Ø¯ÙˆØ¨Ø§Ø±Ù‡ Ø§ÙˆÙ† Ø±Ùˆ ØªØ§ÛŒÛŒØ¯ Ù…ÛŒâ€ŒÚ©Ù†ÛŒØ¯ Ú©Ù‡ Ø¨Ø§ÛŒØ¯ Ø¯Ø± Ù…Ø±Ø§Ø­Ù„ Ø¨Ø¹Ø¯ Ø§Ø²Ø´ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ú©Ù†ÛŒØ¯
@@ -119,3 +119,6 @@ export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
     │   ├── tx-latency-et-vs-jpc.png
     │   └── tx-latency-na-vs-jpc.png
     └── whitepaper.tex
+
+
+.devcontainer/scripts/onCreateCommand.sh
