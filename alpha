@@ -4,7 +4,19 @@ celestia-appd keys add $CELESTIA_WALLET
 celestia-appd keys add $CELESTIA_WALLET
 Ø­ÙˆØ§Ø³ØªÙˆÙ† Ø¨Ø§Ø´Ù‡ ØªÙˆÛŒ Ú©Ø¯ Ø¨Ø§Ù„Ø§ Ø§ÙˆÙ† Ù†Ù‚Ø·Ù‡ Ø§ÙˆÙ„ Ú©Ø¯ Ø±Ùˆ Ù‡Ù… Ø¨Ø§ÛŒØ¯  Ú©Ù¾ÛŒ Ú©Ù†ÛŒØ¯
 
+Updating `forc build --path` usages in docs based on the update in
+#1374.
 
+### Checklist
+- [ ] I have linked to any relevant issues.
+- [x] I have updated the documentation.
+- [ ] I have added tests that prove my fix is effective or that my
+feature works.
+- [x] I have added necessary labels.
+- [x] I have done my best to ensure that my PR adheres to [the Fuel Labs
+Code Review
+Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
+- [x] I have requested a review from the relevant team or maintainers.
 
 cd $ho Ù‚Ø¨Ù„ Ø§Ø² Ù‡Ø± Ú©Ø§Ø±ÛŒ Ø¨Ù‡ Ù¾Ø§Ø¨Ù„ÛŒÚ© Ø§Ø¯Ø±Ø³ØªÙˆÙ Ù‚Ø¨Ù„ Ø§Ø² Ù‡Ø± Ú©Ø§Ø±ÛŒ Ø¨Ù‡ Ù¾Ø§Ø¨Ù„ÛŒÚ© Ø§Ø¯Ø±Ø³ØªÙˆÙ
 
