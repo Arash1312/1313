@@ -7,7 +7,6 @@ Updating `forc build --path` usages in docs based on the update in
 ### Checklist
 - [ ] I have linked to any relevant issues.
 - [x] I have updated the documentation.
-- [ ] I have added tests that prove my fix is effective or that my
 feature works.
 - [x] I have added necessary labels.
 - [x] I have done my best to ensure that my PR adheres to [the Fuel Labs
@@ -23,10 +22,6 @@ mkdir nulink
 Ø§Ú¯Ø± Ù¾ÛŒØ§Ù… Ø¯Ø§Ø¯ Ú©Ù‡ Ø§ÛŒÙ† Ù†Ø§Ù… ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ù‡ Ø§ÛŒØ±Ø§Ø¯ Ù†Ø¯Ø§Ø±Ø¹ Ø¨Ù‡ Ù…Ø±Ø­Ù„Ù‡ Ø¨Ø¹Ø¯ Ø¨Ø±ÛŒØ¯
 
 cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
-
-Ø¨Ù‡ Ø¬Ø§ÛŒ x Ù‡Ø§ Ø§Ø² Ø¢Ø¯Ø±Ø³ÛŒ Ú©Ù‡ Ø¨Ø§Ù„Ø§ØªØ± Ø¨Ù‡ØªÙˆÙ† Ø¯Ø§Ø¯Ù‡ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ú©Ù†ÛŒØ¯ ØŒ Ø¯Ù‚Øª Ú©Ù†ÛŒØ¯ Ú©Ø¯ Ù‡Ø§Ø±Ùˆ Ø¯Ø±Ø³Øª Ú©Ù¾ÛŒ Ú©Ù†ÛŒØ¯ Ùˆ Ù…Ø±Ø§Ù‚Ø¨ Ø¨Ø§Ø´ÛŒØ¯ ÙØ¶Ø§ Ø¨ÛŒÙ† Ú©Ø¯ Ù‡Ø§ Ø¨Ù‡ ÙˆØ¬ÙˆØ¯ Ù†ÛŒØ§Ø¯ØŒ Ø´Ù…Ø§ Ø¨Ø§ÛŒØ¯ Ú©Ø¯ÛŒ Ø´Ø¨ÛŒÙ‡ Ø¨Ù‡ Ø²ÛŒØ± Ø±Ùˆ Ú©Ù‡ Ø¯Ø§Ø¯Ù‡ Ù‡Ø§ÛŒ Ø®ÙˆØ¯ØªÙˆÙ† Ø±Ùˆ ØªÙˆØ´ Ú©Ù¾ÛŒ Ù…ÛŒÚ©Ù†ÛŒØ¯ ÙˆØ§Ø±Ø¯ Ú©Ù†ÛŒØ¯
-
-cp /root/geth-linux-amd64-1.10.23-d901d853/keystore/UTC--2022-09-16T16-46-42.233370072Z--e686bf9b57cec541e0f46f2c0a41bc8836b9b270 /root/nulink
 
 .devcontainer/scripts/onCreateCommand.sh
 chmod -R 777 /root/nulink
@@ -51,11 +46,9 @@ nulink --help
 
 export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 
-Ø¨Ù‡ Ø¬Ø§ÛŒ Ø§ÛŒÚ©Ø³ Ù‡Ø§ Ø§ÙˆÙ† Ù¾Ø³ÙˆØ±Ø¯ Ú©Ù‡ Ø¨Ø§Ù„Ø§ØªØ± ÙˆØ§Ø±Ø¯ Ú©Ø±Ø¯ÛŒØ¯ Ùˆ Ú¯ÙØªÙ… Ø¯Ø± Ø§Ø¯Ø§Ù…Ù‡ Ù„Ø§Ø²Ù…ÙˆÙ† Ù…ÛŒØ´Ù‡ Ø±Ùˆ ÙˆØ§Ø±Ø¯ Ú©Ù†ÛŒØ¯
 
 export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
 
-Ø¯Ø± Ø§ÛŒÙ†Ø¬Ø§ Ù‡Ù… Ø¨Ù‡ Ø¬Ø§ÛŒ Ø§ÛŒÚ©Ø³ Ù‡Ø§ Ø§ÙˆÙ† Ù¾Ø³ÙˆØ±Ø¯ÛŒ Ú©Ù‡ Ø¨Ø§Ù„Ø§ØªØ± Ø¯Ø§Ø¯ÛŒØ¯ Ø±Ùˆ Ø¯ÙˆØ¨Ø§Ø±Ù‡ ÙˆØ§Ø±Ø¯ Ú©Ù†ÛŒØ¯
 
 docker run -it --rm \
 -p 9151:9151 \
