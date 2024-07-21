@@ -66,8 +66,7 @@ nulink/nulink nulink ursula init \
 Ø­ÙˆØ§Ø³ØªÙˆÙ† Ø¨Ø§Ø´Ù‡ ØªÙˆÛŒ Ú©Ø¯ Ø¨Ø§Ù„Ø§ Ø§ÙˆÙ† Ù†Ù‚Ø·Ù‡ Ø§ÙˆÙ„ Ú©Ø¯ Ø±Ùˆ Ù‡Ù… Ø¨Ø§ÛŒØ¯  Ú©Ù¾ÛŒ Ú©Ù†ÛŒØ¯
 .devcontainer/scripts/onCreateCommand.sh
 
-Ø¨Ø¹Ø¯ Ø§Ø² ÙˆØ§Ø±Ø¯ Ú©Ø±Ø¯Ù† Ù¾Ø³ÙˆØ±Ø¯ ÛŒÚ© Ø³Ø±ÛŒ Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ù…ÛŒØ¯Ù‡ Ø¨Ù‡ØªÙˆÙ† Ú©Ù‡ Ø¨Ø§ÛŒØ¯ Ø§ÙˆÙ† Ù‡Ø§ÛŒ ØªÙˆÛŒ ÛŒÙ‡ notepad Ø°Ø®ÛŒØ±Ù‡ Ú©Ù†ÛŒØ¯ Ú©Ù‡ Ø¨Ø§ÛŒØ¯ Ø¯Ø± Ø§Ø¯Ø§Ù…Ù‡ Ø§Ø²Ø´ Ø§Ø³ØªÙØ§Ø¯Ù‡ Ú©Ù†ÛŒØ¯
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+
 celestia-appd keys add $CELESTIA_WALLET
 
 Ø§Ø·Ù„Ø§Ø¹Ø§Øª Ø¯Ø±ÛŒØ§ÙØªÛŒ Ø§ÛŒÙ† Ø¨Ø®Ø´ Ø±Ùˆ ØªÙˆÛŒ Ù†ÙˆØª Ù¾Ø¯ Ø¨Ø±Ø§ÛŒ Ø®ÙˆØ¯ØªÙˆÙ† Ø°Ø®ÛŒØ±Ù‡ Ú©Ù†ÛŒØ¯
