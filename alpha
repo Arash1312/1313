@@ -111,8 +111,5 @@ export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 ---------------------------------
 o apt-get remove docker docker-engine docker.io container
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-── frog.jpg
-    │   ├── images
-    │   ├── join-point-layout.png
-    │   ├── join-point-model-overview.png
-
+─
+.devcontainer/scripts/onCreateCommand.sh
