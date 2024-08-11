@@ -42,7 +42,10 @@ pip install nulink-0.2.0-py3-none-any.whl
 pip install --upgrade pip
 
 source /root/nulink-venv/bin/activate
+wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
+Updating `forc build --path` usages in docs based on the update in
+#1374.
 python -c "import nulink"
 
 nulink --help
