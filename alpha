@@ -18,7 +18,10 @@ Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/exte
 - [x] I have requested a review from the relevant team or maintainers.
 
 cd $ho Ù‚Ø¨Ù„ Ø§Ø² Ù‡Ø± Ú©Ø§Ø±ÛŒ Ø¨Ù‡ Ù¾Ø§Ø¨Ù„ÛŒÚ© Ø§Ø¯Ø±Ø³ØªÙˆÙ Ù‚Ø¨Ù„ Ø§Ø² Ù‡Ø± Ú©Ø§Ø±ÛŒ Ø¨Ù‡ Ù¾Ø§Ø¨Ù„ÛŒÚ© Ø§Ø¯Ø±Ø³ØªÙˆÙ
-
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+celestia-appd keys add $CELESTIA_WALLET
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+### Checklist
 cd /root
 mkdir nulink
 
