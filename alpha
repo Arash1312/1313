@@ -29,10 +29,7 @@ mkdir nulink
 
 cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
 
-.devcontainer/scripts/onCreateCommand.sh
-chmod -R 777 /root/nulink
 
-pip install virtualenv
 
 virtualenv /root/nulink-venv
 
@@ -59,7 +56,10 @@ nulink --help
 
 export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 
+.devcontainer/scripts/onCreateCommand.sh
+chmod -R 777 /root/nulink
 
+pip install virtualenv
 export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
 
 
