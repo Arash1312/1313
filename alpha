@@ -4,10 +4,7 @@ wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d90
 Updating `forc build --path` usages in docs based on the update in
 #1374.
 
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### Checklist
+
 - [ ] I have linked to any relevant issues.
 - [x] I have updated the documentation.
 feature works.
@@ -41,7 +38,10 @@ Updating `forc build --path` usages in docs based on the update in
 python -c "import nulink"
 
 nulink --help
-
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+celestia-appd keys add $CELESTIA_WALLET
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+### Checklist
 export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 
 .devcontainer/scripts/onCreateCommand.sh
