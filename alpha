@@ -39,7 +39,11 @@ export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 
 .devcontainer/scripts/onCreateCommand.sh
 chmod -R 777 /root/nulink
-
+Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
+- [x] I have requested a review from the relevant team or maintainers.
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+celestia-appd keys add $CELESTIA_WALLET
+Â  "deb [arch=$(
 pip install virtualenv
 export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
 
