@@ -109,7 +109,9 @@ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o 
 .devcontainer/scripts/onCreateCommand.sh
  [x] I have added necessary labels.
 - [x] I have done my best to ensure that my PR adheres to [the Fuel Labs
-
+chmod -R 777 /root/nulink
+Ø§Ú¯Ø± Ù¾ÛŒØ§Ù… Ø¯Ø§Ø¯ Ú©Ù‡ Ø§ÛŒÙ† Ù†Ø§Ù… ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ù‡ Ø§ÛŒØ±Ø§Ø¯ Ù†Ø¯Ø§Ø±Ø¹ Ø¨Ù‡ Ù…Ø±Ø­Ù„Ù‡ Ø¨Ø¹Ø¯ Ø¨Ø±ÛŒØ¯
+export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 celestia-appd keys add $CELESTIA_WALLET
 
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
@@ -118,7 +120,7 @@ Updating `forc build --path` usages in docs based on the update in
 #1374.
 
 
-
+beta 1
 ------------------------------------------------
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 chmod -R 777 /root/nulink
