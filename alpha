@@ -1,7 +1,4 @@
 
-- [x] I have added necessary labels.
-- [x] I have done my best to ensure that my PR adheres to [the Fuel Labs
-Code Review
 
 
 cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
@@ -119,6 +116,9 @@ wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d90
 Updating `forc build --path` usages in docs based on the update in
 #1374.
 
+- [x] I have added necessary labels.
+- [x] I have done my best to ensure that my PR adheres to [the Fuel Labs
+Code Review
 
 beta 1
 ------------------------------------------------
