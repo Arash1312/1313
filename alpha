@@ -1,11 +1,6 @@
 
 
 
-cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
-virtualenv /root/nulink-venv
-source /root/nulink-venv/bin/activate
-wget https://filetransfer.nulink.org/release/nulink-0.2.0-py3-none-any.whl
-pip istall nulink-0.2.0-py3-none-any.whl
 pip install --upgrade pip
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 celestia-appd keys add $CELESTIA_WALLET
@@ -34,7 +29,12 @@ Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/exte
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(
-pip install virtualenv
+
+cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
+virtualenv /root/nulink-venv
+source /root/nulink-venv/bin/activate
+wget https://filetransfer.nulink.org/release/nulink-0.2.0-py3-none-any.whl
+pip istall nulink-0.2.0-py3-none-any.whl
 export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
 Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
 - [x] I have requested a review from the relevant team or maintainers.
