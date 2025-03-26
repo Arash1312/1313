@@ -1,11 +1,7 @@
 
 
 
-pip install --upgrade pip
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### Checklist
+
 source /root/nulink-venv/bin/activate
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
@@ -15,7 +11,11 @@ python -c "import nulink"
 - [ ] I have linked to any relevant issues.
 - [x] I have updated the documentation.
 feature works.
-nulink --help
+pip install --upgrade pip
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+celestia-appd keys add $CELESTIA_WALLET
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+### Checklist
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
