@@ -1,6 +1,7 @@
 
 
-
+source /root/nulink-venv/bin/activate
+wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
 source /root/nulink-venv/bin/activate
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
