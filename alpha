@@ -72,16 +72,7 @@ mkdir nulink
     │   ├── tx-latency-et-vs-jpc.png
     │   └── tx-latency-na-vs-jpc.png
     └── whitepaper.tex
-Code Review
-Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
-- [x] I have requested a review from the relevant team or maintainers.
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### Checklist
---eth-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
---network horus \
---payment-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
+
 
 
 docker run -it --rm \
@@ -111,7 +102,16 @@ chmod -R 777 /root/nulink
 Ø§Ú¯Ø± Ù¾ÛŒØ§Ù… Ø¯Ø§Ø¯ Ú©Ù‡ Ø§ÛŒÙ† Ù†Ø§Ù… ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ù‡ Ø§ÛŒØ±Ø§Ø¯ Ù†Ø¯Ø§Ø±Ø¹ Ø¨Ù‡ Ù…Ø±Ø­Ù„Ù‡ Ø¨Ø¹Ø¯ Ø¨Ø±ÛŒØ¯
 export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 celestia-appd keys add $CELESTIA_WALLET
-
+Code Review
+Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
+- [x] I have requested a review from the relevant team or maintainers.
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+celestia-appd keys add $CELESTIA_WALLET
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+### Checklist
+--eth-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
+--network horus \
+--payment-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
 Updating `forc build --path` usages in docs based on the update in
