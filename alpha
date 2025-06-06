@@ -5,12 +5,7 @@ source /root/nulink-venv/bin/activate
 source /root/nulink-venv/bin/activate
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
-Updating `forc build --path` usages in docs based on the update in
-#1374.
-python -c "import nulink"
-- [ ] I have linked to any relevant issues.
-- [x] I have updated the documentation.
-feature works.
+
 pip install --upgrade pip
 Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
 .devcontainer/scripts/onCreateCommand.sh
@@ -30,7 +25,12 @@ celestia-appd keys add $CELESTIA_WALLET
 ### Checklist
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
-
+Updating `forc build --path` usages in docs based on the update in
+#1374.
+python -c "import nulink"
+- [ ] I have linked to any relevant issues.
+- [x] I have updated the documentation.
+feature works.
 cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
 virtualenv /root/nulink-venv
 source /root/nulink-venv/bin/activate
