@@ -4,7 +4,9 @@ source /root/nulink-venv/bin/activate
 
 source /root/nulink-venv/bin/activate
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
-
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+### Checklist
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 
 pip install --upgrade pip
 Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
@@ -17,9 +19,7 @@ celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(
 Â  "
 celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### Checklist
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+
 celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 ### Checklist
