@@ -7,7 +7,13 @@ wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d90
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 ### Checklist
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-
+source /root/nulink-venv/bin/activate
+wget https://filetransfer.nulink.org/release/nulink-0.2.0-py3-none-any.whl
+pip istall nulink-0.2.0-py3-none-any.whl
+export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
+Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
+- [x] I have requested a review from the relevant team or maintainers.
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 pip install --upgrade pip
 Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
 .devcontainer/scripts/onCreateCommand.sh
@@ -33,13 +39,7 @@ python -c "import nulink"
 feature works.
 cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
 virtualenv /root/nulink-venv
-source /root/nulink-venv/bin/activate
-wget https://filetransfer.nulink.org/release/nulink-0.2.0-py3-none-any.whl
-pip istall nulink-0.2.0-py3-none-any.whl
-export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
-Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
-- [x] I have requested a review from the relevant team or maintainers.
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+
 celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 ### Checklist
