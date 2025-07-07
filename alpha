@@ -2,12 +2,7 @@
 export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 source /root/nulink-venv/bin/activate
 
-source /root/nulink-venv/bin/activate
-wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### Checklist
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-source /root/nulink-venv/bin/activate
+
 wget https://filetransfer.nulink.org/release/nulink-0.2.0-py3-none-any.whl
 pip istall nulink-0.2.0-py3-none-any.whl
 export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
@@ -25,7 +20,12 @@ celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(
 Â  "
 celestia-appd keys add $CELESTIA_WALLET
-
+source /root/nulink-venv/bin/activate
+wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+### Checklist
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+source /root/nulink-venv/bin/activate
 celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 ### Checklist
