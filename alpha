@@ -27,7 +27,14 @@ source /root/nulink-venv/bin/activate
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 ### Checklist
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-source /root/nulink-venv/bin/activate
+sourcdocker run -it --rm \
+-p 9151:9151 \
+-v /root/nulink:/code \
+-v /root/nulink:/home/circleci/.local/share/nulink \
+-e NULINK_KEYSTORE_PASSWORD \
+nulink/nulink nulink ursula init \
+--signer keystore:///code/xxxxxxxxxxxxxxxxxxxxxxx \
+--eth-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \e /root/nulink-venv/bin/activate
 
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
@@ -75,14 +82,7 @@ mkdir nulink
 
 
 
-docker run -it --rm \
--p 9151:9151 \
--v /root/nulink:/code \
--v /root/nulink:/home/circleci/.local/share/nulink \
--e NULINK_KEYSTORE_PASSWORD \
-nulink/nulink nulink ursula init \
---signer keystore:///code/xxxxxxxxxxxxxxxxxxxxxxx \
---eth-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
+
 --network horus \
 --payment-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
 --payment-network bsc_testnet \
