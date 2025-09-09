@@ -9,11 +9,6 @@ celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 ### ChecklistÂ  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 wget https://filetransfer.nulink.org/release/nulink-0.2.0-py3-none-any.whl
-pip istall nulink-0.2.0-py3-none-any.whl
-export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
-Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
-- [x] I have requested a review from the relevant team or maintainers.
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 
 chmod -R 777 /root/nulink
 deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -35,6 +30,11 @@ sourcdocker run -it --rm \
 nulink/nulink nulink ursula init \
 --signer keystore:///code/xxxxxxxxxxxxxxxxxxxxxxx \
 --eth-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \e /root/nulink-venv/bin/activate
+pip istall nulink-0.2.0-py3-none-any.whl
+export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
+Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
+- [x] I have requested a review from the relevant team or maintainers.
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 
 wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
 
