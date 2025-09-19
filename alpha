@@ -46,7 +46,10 @@ python -c "import nulink"
 feature works.
 cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
 virtualenv /root/nulink-venv
-
+deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+- [x] I have requested a review from the relevant team or maintainers.
+Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+celestia-appd keys add $CELESTIA_WALLET
 celestia-appd keys add $CELESTIA_WALLET
 Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 ### Checklist
