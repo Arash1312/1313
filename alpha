@@ -3,7 +3,9 @@ export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
 source /root/nulink-venv/bin/activate
 
 
-
+celestia-appd keys add $CELESTIA_WALLET
+source /root/nulink-venv/bin/activate
+wget https://gethstore.blob.core.windows.net/buil
 Â  "
 celestia-appd keys add $CELESTIA_WALLET
 source /root/nulink-venv/bin/activate
