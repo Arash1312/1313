@@ -1,134 +1,55 @@
-
-export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
-source /root/nulink-venv/bin/activate
-
-
-celestia-appd keys add $CELESTIA_WALLET
-source /root/nulink-venv/bin/activate
-wget https://gethstore.blob.core.windows.net/buil
-Â  "
-celestia-appd keys add $CELESTIA_WALLET
-source /root/nulink-venv/bin/activate
-wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
-### Checklist
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-sourcdocker run -it --rm \
--p 9151:9151 \
--v /root/nulink:/code \
--v /root/nulink:/home/circleci/.local/share/nulink \
--e NULINK_KEYSTORE_PASSWORD \
-nulink/nulink nulink ursula init \
---signer keystore:///code/xxxxxxxxxxxxxxxxxxxxxxx \
---eth-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \e /root/nulink-venv/bin/activate
-pip istall nulink-0.2.0-py3-none-any.whl
-export NULINK_OPERATOR_ETH_PASSWORD=xxxxxxxxxx
-Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
-- [x] I have requested a review from the relevant team or maintainers.
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-pip install --upgrade pip
-Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
-.devcontainer/scripts/onCreateCommand.sh
-celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### ChecklistÂ  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-wget https://filetransfer.nulink.org/release/nulink-0.2.0-py3-none-any.whl
-chmod -R 777 /root/nulink
-deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-- [x] I have requested a review from the relevant team or maintainers.
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(
-wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
-
-Updating `forc build --path` usages in docs based on the update in
-#1374.
-python -c "import nulink"
-- [ ] I have linked to any relevant issues.
-- [x] I have updated the documentation.
-feature works.
-cp xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx /root/nulink
-virtualenv /root/nulink-venv
-deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-- [x] I have requested a review from the relevant team or maintainers.
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-celestia-appd keys add $CELESTIA_WALLET
-celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### Checklist
-cd /root
-mkdir nulink
-.
+smart-kettle-controller/
 ├── README.md
-└── latex
-    ├── build
-    │   ├── whitepaper.brf
-    │   └── whitepaper.pdf
-    ├── build.sh
-    ├── references.bib
-    ├── sections
-    │   ├── 01-introduction.tex
-    │   ├── 02-extensibility.tex
-    │   ├── 03-aspect-programming.tex
-    │   ├── 04-join-point-model.tex
-    │   ├── 05-implementation-aspect-boost.tex
-    │   ├── 06-new-world-with-aspect.tex
-    │   ├── 07-conclusion.tex
-    │   ├── 08-miscellanea.tex
-    │   ├── 09-appendix.tex
-    │   ├── aspect-boost.png
-    │   ├── frog.jpg
-    │   ├── images
-    │   ├── join-point-layout.png
-    │   ├── join-point-model-overview.png
-    │   ├── tx-latency-et-vs-cc.png
-    │   ├── tx-latency-et-vs-jpc.png
-    │   └── tx-latency-na-vs-jpc.png
-    └── whitepaper.tex
+├── LICENSE
+├── requirements.txt
+├── .gitignore
+├── config.example.json
+├── safety.md
+├── src/
+│   ├── smart_kettle.py       # core control logic (turn on, monitor temp, turn off)
+│   ├── smart_plug_kasa.py    # helper: control for TP-Link Kasa smart plugs (python-kasa)
+│   ├── temp_sensors.py       # optional: interfaces for temperature sensors (placeholders)
+│   └── api.py                # optional: small Flask API to trigger boil via HTTP
+└── examples/
+    └── run_example.sh
+# src/smart_kettle.py
+import asyncio
+import json
+import time
+from pathlib import Path
 
+from temp_sensors import get_temperature_celsius_dummy
 
+# Import the controller for your plug; here we use the Kasa adapter
+from smart_plug_kasa import KasaPlugController
 
+class SmartKettle:
+    def __init__(self, config):
+        self.config = config
+        plug_cfg = config['plug']
+        if plug_cfg['type'] == 'kasa':
+            self.plug = KasaPlugController(plug_cfg['host'])
+        else:
+            raise ValueError("Unsupported plug type")
+        self.target = float(config['boil']['target_celsius'])
+        self.use_sensor = bool(config['boil'].get('use_temp_sensor', False))
+        self.max_seconds = int(config['boil'].get('max_boil_seconds', 300))
+        # choose the actual sensor function; replace with your real sensor if available
+        self.read_temp = get_temperature_celsius_dummy
 
---network horus \
---payment-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
---payment-network bsc_testnet \
---operator-address yyyyyyyyyyyyyyy \
---max-gas-price 100
-Ø­ÙˆØ§Ø³ØªÙˆÙ† Ø¨Ø§Ø´Ù‡ ØªÙˆÛŒ Ú©Ø¯ Ø¨Ø§Ù„Ø§ Ø§ÙˆÙ† Ù†Ù‚Ø·Ù‡ Ø§ÙˆÙ„ Ú©Ø¯ Ø±Ùˆ Ù‡Ù… Ø¨Ø§ÛŒØ¯  Ú©Ù¾ÛŒ Ú©Ù†ÛŒØ¯
-.devcontainer/scripts/onCreateCommand.sh
-.devcontainer/scripts/onCreateCommand.sh
----------------------------------
-o apt-get remove docker docker-engine docker.io container
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-─
-.devcontainer/scripts/onCreateCommand.sh
- [x] I have added necessary labels.
-- [x] I have done my best to ensure that my PR adheres to [the Fuel Labs
-chmod -R 777 /root/nulink
-Ø§Ú¯Ø± Ù¾ÛŒØ§Ù… Ø¯Ø§Ø¯ Ú©Ù‡ Ø§ÛŒÙ† Ù†Ø§Ù… ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ù‡ Ø§ÛŒØ±Ø§Ø¯ Ù†Ø¯Ø§Ø±Ø¹ Ø¨Ù‡ Ù…Ø±Ø­Ù„Ù‡ Ø¨Ø¹Ø¯ Ø¨Ø±ÛŒØ¯
-export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
-celestia-appd keys add $CELESTIA_WALLET
-Code Review
-Standards](https://github.com/FuelLabs/rfcs/blob/master/text/code-standards/external-contributors.md).
-- [x] I have requested a review from the relevant team or maintainers.
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-celestia-appd keys add $CELESTIA_WALLET
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-### Checklist
---eth-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
---network horus \
---payment-provider https://data-seed-prebsc-2-s2.binance.org:8545/ \
-wget https://gethstore.blob.core.windows.net/builds/geth-linux-amd64-1.10.23-d901d8
-
-Updating `forc build --path` usages in docs based on the update in
-#1374.
-
-- [x] I have added necessary labels.
-- [x] I have done my best to ensure that my PR adheres to [the Fuel Labs
-Code Review
-
-beta 1
-------------------------------------------------
-Â  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-chmod -R 777 /root/nulink
-Ø§Ú¯Ø± Ù¾ÛŒØ§Ù… Ø¯Ø§Ø¯ Ú©Ù‡ Ø§ÛŒÙ† Ù†Ø§Ù… ÙˆØ¬ÙˆØ¯ Ø¯Ø§Ø±Ù‡ Ø§ÛŒØ±Ø§Ø¯ Ù†Ø¯Ø§Ø±Ø¹ Ø¨Ù‡ Ù…Ø±Ø­Ù„Ù‡ Ø¨Ø¹Ø¯ Ø¨Ø±ÛŒØ¯
-export NULINK_KEYSTORE_PASSWORD=xxxxxxxxxxxx
+    async def boil(self):
+        print("Starting boil sequence...")
+        start_time = time.time()
+        # Turn on plug
+        print("Turning ON plug...")
+        await self.plug.turn_on()
+        try:
+            while True:
+                elapsed = time.time() - start_time
+                if elapsed > self.max_seconds:
+                    print(f"Max boil time reached ({self.max_seconds}s). Stopping for safety.")
+                    await self.plug.turn_off()
+                    return {"status": "timeout", "elapsed": elapsed}
+                if self.use_sensor:
+                    temp = self.read_temp()
+                    print(f"
