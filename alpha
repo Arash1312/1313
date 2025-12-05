@@ -23,13 +23,7 @@ from temp_sensors import get_temperature_celsius_dummy
 # Import the controller for your plug; here we use the Kasa adapter
 from smart_plug_kasa import KasaPlugController
 
-class SmartKettle:
-    def __init__(self, config):
-        self.config = config
-        plug_cfg = config['plug']
-        if plug_cfg['type'] == 'kasa':
-            self.plug = KasaPlugController(plug_cfg['host'])
-        else:
+
             raise ValueError("Unsupported plug type")
         self.target = float(config['boil']['target_celsius'])
         self.use_sensor = bool(config['boil'].get('use_temp_sensor', False))
@@ -43,7 +37,13 @@ class SmartKettle:
         # Turn on plug
         print("Turning ON plug...")
         await self.plug.turn_on()
-        try:
+        try:class SmartKettle:
+    def __init__(self, config):
+        self.config = config
+        plug_cfg = config['plug']
+        if plug_cfg['type'] == 'kasa':
+            self.plug = KasaPlugController(plug_cfg['host'])
+        else:
             while True:
                 elapsed = time.time() - start_time
                 if elapsed > self.max_seconds:
