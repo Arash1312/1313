@@ -23,7 +23,9 @@ from pathlib import Path
         # choose the actual sensor function; replace with your real sensor if available
         self.read_temp = get_temperature_celsius_dummy
 from temp_sensors import get_temperature_celsius_dummy
-
+import asyncio
+import json
+import time
 # Import the controller for your plug; here we use the Kasa adapter
 from smart_plug_kasa import KasaPlugController
  print(f"Max boil time reached ({self.max_seconds}s). Stopping for safety.")
