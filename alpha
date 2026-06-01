@@ -37,7 +37,10 @@ from smart_plug_kasa import KasaPlugController
  self.use_sensor = bool(config['boil'].get('use_temp_sensor', False))
         self.max_seconds = int(config['boil'].get('max_boil_seconds', 300))
         # choose the actual sensor function; replace with your real sensor if availabl
-          
+              self.use_sensor = bool(config['boil'].get('use_temp_sensor', False))
+        self.max_seconds = int(config['boil'].get('max_boil_seconds', 300))
+        # choose the actual sensor function; replace with your real sensor if available
+        self.read_temp = get_temperature_celsius_dummy
     async def boil(self):
         print("Starting boil sequence...")
         start_time = time.time()
