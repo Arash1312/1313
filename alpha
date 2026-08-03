@@ -1,62 +1,49 @@
-smart-kettle-controller/
-├── README.md
-├── LICENSE
-├── requirements.txt
-├── .gitignore
-├── config.example.json
-├── safety.md
-├── src/
-│   ├── smart_kettle.py       # core control logic (turn on, monitor temp, turn off)
-│   ├── smart_plug_kasa.py    # helper: control for TP-Link Kasa smart plugs (python-kasa)
-│   ├── temp_sensors.py       # optional: interfaces for temperature sensors (placeholders)
-│   └── api.py                # optional: small Flask API to trigger boil via HTTP
-└── examples/
-    └── run_example.sh
-# src/smart_kettle.py
-import asyncio
-import json
-import time
-from pathlib import Path
-  self.target = float(config['boil']['target_celsius'])
-        self.use_sensor = bool(config['boil'].get('use_temp_sensor', False))
-        self.max_seconds = int(config['boil'].get('max_boil_seconds', 300))
-        # choose the actual sensor function; replace with your real sensor if available
-        self.read_temp = get_temperature_celsius_dummy
-from temp_sensors import get_temperature_celsius_dummy
-import asyncio
-import json
-import time
-# Import the controller for your plug; here we use the Kasa adapter
-from smart_plug_kasa import KasaPlugController
- print(f"Max boil time reached ({self.max_seconds}s). Stopping for safety.")
-                    await self.plug.turn_off()
-                    return {"status": "timeout", "elapsed": elapsed}
-                if self.use_sensor:
-                    temp = self.read_temp()
-                    print(f"
- self.use_sensor = bool(config['boil'].get('use_temp_sensor', False))
-        self.max_seconds = int(config['boil'].get('max_boil_seconds', 300))
-        # choose the actual sensor function; replace with your real sensor if availabl
-              self.use_sensor = bool(config['boil'].get('use_temp_sensor', False))
-        self.max_seconds = int(config['boil'].get('max_boil_seconds', 300))
-        # choose the actual sensor function; replace with your real sensor if available
-        self.read_temp = get_temperature_celsius_dummy
-    async def boil(self):
-        print("Starting boil sequence...")
-        start_time = time.time()
-        # Turn on plug
-        print("Turning ON plug...")
-        await self.plug.turn_on()
-        try:class SmartKettle:
-    def __init__(self, config):
-        self.config = config
-        plug_cfg = config['plug']
-        if plug_cfg['type'] == 'kasa':
-            self.plug = KasaPlugController(plug_cfg['host'])
-        else:
-            while True:
-                elapsed = time.time() - start_time
-                if elapsed > self.max_seconds:
-                     raise ValueError("Unsupported plug type")
-      
-
+{
+  token: "USDC",
+  totalConfirmedBalance: "175.001000",
+  breakdown: [
+    {
+      depositor: "0x1234SourceDepositorWalletAddress12345678",
+      totalConfirmed: "175.001000",
+      breakdown: [
+        {
+          chain: "Ethereum_Sepolia",
+          confirmedBalance: "30.000000",
+        }, {
+          chain: "Base_Sepolia",
+          confirmedBalance: "40.000000",
+        }, {
+          chain: "Avalanche_Fuji",
+          confirmedBalance: "25.000000",
+        }, {
+          chain: "Arbitrum_Sepolia",
+          confirmedBalance: "0.000000",
+        }, {
+          chain: "Sonic_Testnet",
+          confirmedBalance: "0.000000",
+        }, {
+          chain: "World_Chain_Sepolia",
+          confirmedBalance: "0.000000",
+        }, {
+          chain: "Sei_Testnet",
+          confirmedBalance: "0.000000",
+        }, {
+          chain: "HyperEVM_Testnet",
+          confirmedBalance: "0.000000",
+        }, {
+          chain: "Arc_Testnet",
+          confirmedBalance: "80.001000",
+        }, {
+          chain: "Optimism_Sepolia",
+          confirmedBalance: "0.000000",
+        }, {
+          chain: "Polygon_Amoy_Testnet",
+          confirmedBalance: "0.000000",
+        }, {
+          chain: "Unichain_Sepolia",
+          confirmedBalance: "0.000000",
+        }
+      ],
+    }
+  ],
+}
